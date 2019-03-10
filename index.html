@@ -4,59 +4,48 @@
 <title>Pwned.</title>
 <meta charset="utf-8" />
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 <style type="text/css">
 body {
-    background-color: #000;
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-h1, h2 {
-    text-align: center;
-    font-family: 'Ubuntu', sans-serif;
+    color: #FFFF00;
+    background-color: #000000;
 }
 div {
-    width: 450px;
-    margin: 5em auto;
-    padding: 50px;
-    background-color: #000;
-    border-radius: 1em;
-    color: #f00;
+    padding-top: 100px;
 }
-a:link, a:visited {
-    color: #38488f;
-    text-decoration: none;
+span {
+    color: #FF0000;
+    font-size: 3em;
 }
-@media (max-width: 700px) {
-    body {
-        background-color: #000;
-    }
-    div {
-        width: auto;
-        margin: 0 auto;
-        border-radius: 0;
-        padding: 1em;
-    }
+p {
+    font-size: 2em;
 }
 </style>
 </head>
 <body>
 <div>
-<h1>Pwned.</h1>
-<h2>by Akaki Tsunoda</h2>
-<pre>
-# date
-Sat Mar  9 23:22:13 JST 2019
-
-# dig +nostats +nocomments +nocmd evil.akaki.io
-;evil.akaki.io.			IN	A
-evil.akaki.io.		3599	IN	A	185.199.109.153
-evil.akaki.io.		3599	IN	A	185.199.108.153
-evil.akaki.io.		3599	IN	A	185.199.110.153
-evil.akaki.io.		3599	IN	A	185.199.111.153
-</pre>
+<span><i>Pwned.</i></span><br>
+<span>by Akaki Tsunoda</span><br>
+<p>
+<i>
+# date<br>
+Sun Mar 10 09:05:46 JST 2019<br>
+<br>
+# dig ns evil.akaki.io<br>
+(...)<br>
+;; ANSWER SECTION:<br>
+evil.akaki.io.		21599	IN	CNAME	atsunoda.github.io.<br>
+(...)<br>
+<br>
+# dig a atsunoda.github.io<br>
+(...)<br>
+;; ANSWER SECTION:<br>
+atsunoda.github.io.	3599	IN	A	185.199.109.153<br>
+atsunoda.github.io.	3599	IN	A	185.199.110.153<br>
+atsunoda.github.io.	3599	IN	A	185.199.108.153<br>
+atsunoda.github.io.	3599	IN	A	185.199.111.153<br>
+(...)
+</i>
+</p>
 </div>
 </body>
 </html>
